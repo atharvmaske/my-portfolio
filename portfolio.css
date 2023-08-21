@@ -323,7 +323,6 @@ html{
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s;
-    position: relative;
 }
 
 .project img {
