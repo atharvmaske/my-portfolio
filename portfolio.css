@@ -18,6 +18,7 @@ html{
     background-color: #8d6ef9;
     color: white;
     height:70px ;
+    z-index: 1000;
 }
 
 .navbar-left {
@@ -300,7 +301,7 @@ html{
 }
 .dropdown{
     position: absolute;
-    right: 2rem;
+    font-weight: bolder;
     top: 90px;
     height: 0px;
     width: 100%;
@@ -308,6 +309,7 @@ html{
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
+    z-index: 2000;
 }
 .dropdown li{
     padding: 0.7rem;
@@ -316,6 +318,9 @@ html{
     justify-content: center;
 }
 .dropdown li a{
+    background: #c5c8c9;
+    padding: 5px 9px;
+    border-radius: 30px;
     color: rgb(135, 30, 192);
     text-decoration: none;
 }
@@ -332,6 +337,7 @@ html{
         margin: 0;
         padding: 0;
         overflow-x: hidden;
+        scroll-behavior: smooth;
     }
     body {
         font-size: 14px; 
@@ -491,8 +497,6 @@ html{
 .project:hover .project-overlay {
     opacity: 1;
 }
-
-
 
 .site-footer {
     background-color: #333;
