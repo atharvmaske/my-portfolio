@@ -14,13 +14,21 @@
             <span class="name">Atharv Maske</span>
         </div>
         <div class="navbar-right">
-            <ul class="nav-items">
+            <button id="toggleMenu" class="menu-toggle"><i class="fa-solid fa-bars fa-lg"></i></button>
+            <ul class="nav-items" id="menuItems">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+        </div>
+        <div class="dropdown ">
+            <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
         </div>
     </nav>
     
@@ -208,6 +216,18 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        const togglebtn = document.querySelector('.menu-toggle')
+        const toggleicon = document.querySelector('.menu-toggle i')
+        const dropdown = document.querySelector('.dropdown')
+    
+        togglebtn.onclick = function(){
+            dropdown.classList.toggle('open');
+            toggleicon.classList.toggle('fa-bars');
+            toggleicon.classList.toggle('fa-times');
+        }
+    </script>
     
 </body>
 </html>

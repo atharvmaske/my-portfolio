@@ -76,6 +76,13 @@ html{
     transform-origin: bottom left;
   }
 
+  .navbar-right .menu-toggle{
+    color: #0f0000;
+    border-radius: 20px;
+    cursor: pointer;
+    display: none;
+  }
+
 .home {
     height: 750px;
     display: flex;
@@ -244,6 +251,9 @@ html{
     border-radius: 5px;
   }
 
+  
+
+
   .college img:hover {
     transform: translateY(-10px);
   }
@@ -286,13 +296,121 @@ html{
 .contact {
     height: 500px;
 }
-
-
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    /* Add responsive styles here */
+.dropdown{
+    position: absolute;
+    right: 2rem;
+    top: 90px;
+    height: 0px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
 }
-/* Projects section styles */
+.dropdown li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown li a{
+    color: rgb(135, 30, 192);
+    text-decoration: none;
+}
+.dropdown.open{
+    height: 240px;
+}
+
+
+/* Media query for screens with a maximum width of 480px */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; 
+    }
+
+    .navbar {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px;
+    }
+
+    .name {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .nav-items {
+        display: none;
+    }
+    
+    .dropdown{
+        display: block;
+    }
+    
+   .navbar-right .nav-items  
+   {
+    display: none;
+   }
+   .navbar-right .menu-toggle{
+    display: block;
+   }
+    .navbar-right {
+        margin-right: 0;
+    }
+
+    .navbar-right ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home {
+        height: auto;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .about-me-info {
+        width: 100%;
+    }
+
+    .resume-link,
+    .language,
+    .college {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .projects {
+        height:fit-content !important;
+    }
+
+    .project-row {
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+        align-items:flex-start; 
+    }
+
+    .project {
+        width: 98% !important; 
+    }
+
+    .footer-contact {
+        margin: 0;  
+    }
+    .project img {
+        border-radius: 30px;
+        transition: transform 0.3s;
+    }
+
+    .thanks-message {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+
+
 .projects {
     height: 790px;
     background-color: #e74c3c;
